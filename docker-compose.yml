@@ -1,0 +1,10 @@
+version: "2"
+services:
+  base-application:
+    build: .
+    environment:
+      - NPM_PACKAGE_NAME=whatever-klmfiasdlnaanlsd
+      - CODEGEN_SWAGGER_FILE=/swagger.yaml
+      - CODEGEN_LANGUAGE=typescript-fetch
+      - NPM_AUTH_TOKEN=
+      - NPM_EMAIL=
