@@ -1,6 +1,6 @@
 #### description
 
-generates a sdk from a swagger.(yaml|json), fetches the latest version of the packge from npm, increments the version and publishes the package to npm
+generates a sdk from a swagger.(yaml|json), fetches the latest version of the packge from npm, increments the version (+ 0.0.1) and publishes the package to npm
 
 #### usage
 
