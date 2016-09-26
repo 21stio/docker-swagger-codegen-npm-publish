@@ -7,4 +7,3 @@ services:
       - CODEGEN_SWAGGER_FILE=/swagger.yaml
       - CODEGEN_LANGUAGE=typescript-fetch
       - NPM_AUTH_TOKEN=
-      - NPM_EMAIL=

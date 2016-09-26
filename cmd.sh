@@ -2,8 +2,8 @@
 
 set -e
 
-if [ "$1" = '-h' ]  || [ -z ${NPM_EMAIL+x} ] || [ -z ${NPM_AUTH_TOKEN+x} ] || [ -z ${NPM_PACKAGE_NAME+x} ] || [ -z ${CODEGEN_SWAGGER_FILE+x} ] || [ -z ${CODEGEN_LANGUAGE+x} ]; then
-	echo "environment variables NPM_EMAIL, NPM_AUTH_TOKEN, NPM_PACKAGE_NAME, CODEGEN_SWAGGER_FILE and CODEGEN_LANGUAGE need to be set"
+if [ "$1" = '-h' ]  || [ -z ${NPM_AUTH_TOKEN+x} ] || [ -z ${NPM_PACKAGE_NAME+x} ] || [ -z ${CODEGEN_SWAGGER_FILE+x} ] || [ -z ${CODEGEN_LANGUAGE+x} ]; then
+	echo "environment variables NPM_AUTH_TOKEN, NPM_PACKAGE_NAME, CODEGEN_SWAGGER_FILE and CODEGEN_LANGUAGE need to be set"
 	exit
 fi
 
