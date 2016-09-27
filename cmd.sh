@@ -7,6 +7,8 @@ if [ "$1" = '-h' ]  || [ -z ${NPM_AUTH_TOKEN+x} ] || [ -z ${NPM_PACKAGE_NAME+x} 
 	exit
 fi
 
+echo //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN} > ~/.npmrc
+
 CURRENT_NPM_PACKAGE_VERSION=$(npm view ${NPM_PACKAGE_NAME} version 2>/dev/null || echo "0.0.0")
 NEW_NPM_PACKAGE_VERSION=$(/./increment_version.sh -p ${CURRENT_NPM_PACKAGE_VERSION})
 
@@ -14,7 +16,5 @@ java -jar swagger-codegen-cli.jar generate --input-spec ${CODEGEN_SWAGGER_FILE} 
 
 cd /sdk
 npm version ${NEW_NPM_PACKAGE_VERSION}
-
-echo //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN} > ~/.npmrc
 
 npm publish
